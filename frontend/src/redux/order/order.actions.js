@@ -25,10 +25,7 @@ export const placeOrder = (formData, history) => async (dispatch) => {
   try {
     dispatch({ type: PLACE_ORDER_REQUEST });
 
-    const { data } = await axios.post(
-      "http://localhost:5000/place/order",
-      formData
-    );
+    const { data } = await axios.post("/place/order", formData);
 
     dispatch({ type: PLACE_ORDER_SUCCESS, data: data });
     dispatch(setAlert("Placed order successfully", "success"));
@@ -53,7 +50,7 @@ export const getAdminORders = () => async (dispatch) => {
   try {
     dispatch({ type: GET_ADMIN_ORDER_REQUEST });
 
-    const { data } = await axios.get("http://localhost:5000/orders");
+    const { data } = await axios.get("/orders");
     console.log(data);
     dispatch({ type: GET_ADMIN_ORDER_SUCCESS, payload: data.data });
   } catch (error) {
@@ -66,7 +63,7 @@ export const confirmOrder = (id, isConfirmed, history) => async (dispatch) => {
   try {
     dispatch({ type: CONFIRM_ORDER_REQUEST });
 
-    const { data } = await axios.put(`http://localhost:5000/orders/${id}`, {
+    const { data } = await axios.put(`/orders/${id}`, {
       isConfirmed,
     });
     dispatch({
@@ -94,7 +91,7 @@ export const getMyOrders = () => async (dispatch) => {
   try {
     dispatch({ type: GET_MY_ORDERS_REQUEST });
 
-    const { data } = await axios.get(`http://localhost:5000/myorders`);
+    const { data } = await axios.get(`/myorders`);
     dispatch({ type: GET_MY_ORDERS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: GET_MY_ORDERS_FAIL, payload: error });
@@ -102,37 +99,31 @@ export const getMyOrders = () => async (dispatch) => {
   }
 };
 
-export const setpaymentType = (id, paymentType, history) => async (
-  dispatch
-) => {
-  try {
-    dispatch({ type: SET_PAYMENT_TYPE_REQUEST });
+export const setpaymentType =
+  (id, paymentType, history) => async (dispatch) => {
+    try {
+      dispatch({ type: SET_PAYMENT_TYPE_REQUEST });
 
-    const { data } = await axios.put(
-      `http://localhost:5000/order/payment-type/${id}`,
-      {
+      const { data } = await axios.put(`/order/payment-type/${id}`, {
         paymentType,
-      }
-    );
-    dispatch({
-      type: SET_PAYMENT_TYPE_SUCCESS,
-      payload: { data, id, paymentType },
-    });
-    window.location.reload();
-    history.push("/dashboard");
-  } catch (error) {
-    dispatch({ type: SET_PAYMENT_TYPE_FAIL, payload: error });
-    console.log(error);
-  }
-};
+      });
+      dispatch({
+        type: SET_PAYMENT_TYPE_SUCCESS,
+        payload: { data, id, paymentType },
+      });
+      window.location.reload();
+      history.push("/dashboard");
+    } catch (error) {
+      dispatch({ type: SET_PAYMENT_TYPE_FAIL, payload: error });
+      console.log(error);
+    }
+  };
 
 export const setpaymentStatus = (id, history) => async (dispatch) => {
   try {
     dispatch({ type: SET_PAYMENT_STATUS_REQUEST });
 
-    const { data } = await axios.put(
-      `http://localhost:5000/payment-status/${id}`
-    );
+    const { data } = await axios.put(`/payment-status/${id}`);
     dispatch({ type: SET_PAYMENT_STATUS_SUCCESS, payload: { data, id } });
     dispatch(setAlert("Payment done", "success"));
     window.location.reload();

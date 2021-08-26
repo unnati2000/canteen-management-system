@@ -21,7 +21,7 @@ export const loadUser = () => async (dispatch) => {
   }
 
   try {
-    const res = await axios.get("http://localhost:5000/me");
+    const res = await axios.get("/me");
     dispatch({
       type: USER_LOADED,
       payload: res.data,
@@ -48,11 +48,7 @@ export const registerUser = (formData) => async (dispatch) => {
     });
 
     // Make a request to backend API
-    const res = await axios.post(
-      "http://localhost:5000/signup",
-      formData,
-      config
-    );
+    const res = await axios.post("/signup", formData, config);
 
     // If no errors, dispatch REGISTER_SUCCESS
     dispatch({
@@ -95,11 +91,7 @@ export const loginUser = (formData) => async (dispatch) => {
     });
 
     // Make a request to backend API
-    const res = await axios.post(
-      "http://localhost:5000/signin",
-      formData,
-      config
-    );
+    const res = await axios.post("/signin", formData, config);
 
     // If no errors, dispatch LOGIN_SUCCESS
     dispatch({

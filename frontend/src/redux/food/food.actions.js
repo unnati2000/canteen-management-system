@@ -27,11 +27,7 @@ export const addFoodItem = (formData, history) => async (dispatch) => {
   try {
     dispatch({ type: ADD_FOOD_REQUEST });
 
-    const { data } = await axios.post(
-      "http://localhost:5000/add",
-      formData,
-      config
-    );
+    const { data } = await axios.post("/add", formData, config);
 
     dispatch({ type: ADD_FOOD_SUCCESS, payload: data });
     dispatch(setAlert("Added food successfully", "success"));
@@ -55,7 +51,7 @@ export const getAllFoodItems = (category) => async (dispatch) => {
   try {
     dispatch({ type: GET_ALL_FOOD_ITEMS_REQUEST });
 
-    const { data } = await axios.get(`http://localhost:5000/food/${category}`);
+    const { data } = await axios.get(`/food/${category}`);
 
     dispatch({ type: GET_ALL_FOOD_ITEMS_SUCCESS, payload: data.data });
   } catch (error) {
@@ -67,7 +63,7 @@ export const getAllFoodItems = (category) => async (dispatch) => {
 export const getSingleFoodItem = (id) => async (dispatch) => {
   try {
     dispatch({ type: GET_SINGLE_FOOD_ITEM_REQUEST });
-    const { data } = await axios.get(`http://localhost:5000/food-item/${id}`);
+    const { data } = await axios.get(`/food-item/${id}`);
     dispatch({ type: GET_SINGLE_FOOD_ITEM_SUCCESS, payload: data });
   } catch (error) {
     console.log(error);
@@ -83,11 +79,7 @@ export const editFoodItem = (formData, id, history) => async (dispatch) => {
   };
   try {
     dispatch({ type: EDIT_FOOD_ITEM_REQUEST });
-    const { data } = await axios.put(
-      `http://localhost:5000/edit/${id}`,
-      formData,
-      config
-    );
+    const { data } = await axios.put(`/edit/${id}`, formData, config);
     dispatch({ type: EDIT_FOOD_ITEM_SUCCESS, payload: data });
     dispatch(setAlert("Edit food done", "success"));
 
@@ -109,7 +101,7 @@ export const editFoodItem = (formData, id, history) => async (dispatch) => {
 export const deleteFoodItem = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_FOOD_ITEM_REQUEST });
-    await axios.delete(`http://localhost:5000/delete/${id}`);
+    await axios.delete(`/delete/${id}`);
     dispatch({ type: DELETE_FOOD_ITEM_SUCCESS, payload: id });
     dispatch(setAlert("Deleted food item successfully", "success"));
   } catch (error) {
