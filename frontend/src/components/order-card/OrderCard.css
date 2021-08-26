@@ -1,0 +1,93 @@
+.order-card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 400px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.order-card h3 {
+  color: #ff2a2a;
+}
+
+.order-card img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.ordered-food {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accept {
+  border: none;
+  padding: 10px 30px;
+  background: rgb(2, 146, 62);
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.reject {
+  border: none;
+  padding: 10px 30px;
+  background: rgb(248, 83, 54);
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.admin-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accepted-span {
+  color: rgb(6, 172, 6);
+  font-weight: 600;
+}
+
+.rejected-span {
+  color: #ff2a2a;
+}
+
+.notConfirm-span {
+  color: rgb(3, 84, 138);
+  font-weight: 600;
+}
+
+.payment-button {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.online-btn,
+.offline-btn {
+  margin-right: 10px;
+  padding: 10px 30px;
+  font-size: 15px;
+  border: none;
+  background-color: #ff2a2a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-done {
+  margin-right: 10px;
+  padding: 10px 30px;
+  font-size: 15px;
+  border: none;
+  background-color: #ff2a2a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

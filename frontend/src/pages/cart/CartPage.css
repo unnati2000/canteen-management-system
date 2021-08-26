@@ -1,0 +1,84 @@
+.table-div {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  margin-top: 40px;
+}
+
+.table th {
+  font-size: 25px;
+  padding: 0 20px;
+}
+
+.table td {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.table img {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 10px 40px;
+}
+.cart-total button {
+  background: #ff2a2a;
+  padding: 10px 0;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add,
+.minus,
+.remove {
+  margin: 0 7px;
+  padding: 3px 7px;
+  text-align: center;
+}
+.add,
+.minus {
+  background: rgb(1, 207, 104);
+  border: none;
+}
+
+.remove {
+  background: red;
+  border: none;
+  color: white;
+}
+
+.icon {
+  fill: white;
+}
+
+.table input {
+  margin: 20px 0;
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 20px;
+  border: solid 2px #ff2a2a;
+}
+
+.table textarea {
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 20px;
+  border: solid 2px #ff2a2a;
+}
+
+.teacher {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}

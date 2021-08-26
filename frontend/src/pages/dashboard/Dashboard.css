@@ -1,0 +1,52 @@
+.dashboard-root {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.profile-details {
+  background: #ff2a2a;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 100vh;
+}
+
+.profile-details img {
+  height: 100px;
+  width: 100px;
+  border-radius: 300px;
+}
+
+.profile-details h1 {
+  color: white;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile p {
+  color: white;
+  font-size: 20px;
+}
+
+.links {
+  text-align: center;
+}
+
+.dashboard-link {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 15px 0;
+}
+
+.order-status {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 30px 40px;
+}
+
+.dashboard-text {
+  padding-left: 40px;
+}

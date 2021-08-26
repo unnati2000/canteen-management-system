@@ -1,0 +1,130 @@
+.landing-page-div {
+  background: url("../../assets/canteenhome.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120vh;
+}
+
+.landing-page-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  color: white;
+}
+
+.landing-page-header h1 {
+  font-size: 60px;
+}
+.landing-page-header p {
+  font-size: 20px;
+}
+
+.landing-page-header input {
+  padding: 10px 30px;
+  width: 50%;
+}
+
+.landing-page-header button {
+  width: 15%;
+  padding: 13px 30px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0065ff, #00cf9b);
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.menu {
+  margin: 30px 0;
+}
+.menu-header {
+  text-align: center;
+  font-size: 30px;
+}
+
+.menu-header h3 {
+  color: #ff2a2a;
+  font-size: 50px;
+}
+
+.menu-card-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-card {
+  height: 300px;
+  width: 100%;
+  margin: 0 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+}
+.menu-card h1 {
+  color: white;
+}
+.red {
+  background: #ff2a2a;
+  width: 100%;
+  margin: 0;
+  padding-top: 20px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 120px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  transform: translateY(-50%) translateX(-60%);
+}
+
+.dosa {
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  transform: translateY(-40%) translateX(-50%);
+}
+.samosa {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  transform: translateY(-60%) translateX(-50%);
+}
+
+.chinese {
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  transform: translateY(-60%) translateX(-50%);
+}
+
+.button {
+  border: none;
+  padding: 10px 30px;
+  font-size: 17px;
+  border-radius: 50px;
+  background: transparent;
+  color: #ff2a2a;
+  border: solid 1px #ff2a2a;
+  margin-top: 100px;
+}
+
+.button:hover {
+  background: #ff2a2a;
+  color: white;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  box-shadow: inset 400px 0 0 0 #ff2a2a;
+}

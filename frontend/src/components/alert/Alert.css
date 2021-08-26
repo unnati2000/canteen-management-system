@@ -1,0 +1,21 @@
+.notification {
+  position: sticky;
+  width: 100vw;
+  top: 0;
+  text-align: center;
+  margin-bottom: 0 !important;
+  border-radius: 0;
+  z-index: 100;
+
+  padding: 15px 30px;
+}
+
+.success {
+  background: rgb(3, 160, 3);
+  color: white;
+}
+
+.danger {
+  background: rgb(247, 59, 59);
+  color: white;
+}

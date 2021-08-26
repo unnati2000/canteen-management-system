@@ -1,0 +1,11 @@
+.food-root h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.food-page {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin: 50px 130px;
+}

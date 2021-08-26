@@ -1,0 +1,16 @@
+.footer {
+  background: rgba(180, 178, 178, 0.933);
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 4fr;
+}
+.about {
+  padding-left: 30px;
+}
+
+.header p {
+  padding-left: 10px;
+}
+
+.contact-us {
+  padding-right: 20px;
+}

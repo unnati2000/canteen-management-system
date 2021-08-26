@@ -1,0 +1,47 @@
+.root {
+  background: #f89e8e;
+  padding-top: 80px;
+}
+
+.add-food-div {
+  margin: 0 200px;
+  background: white;
+  padding: 50px 70px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input,
+.root select {
+  border: orangered solid 1px;
+  padding: 10px 40px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 17px;
+  border-radius: 7px;
+}
+h1 {
+  color: #ff2600;
+}
+
+.add-food-div button {
+  background: #ff2600;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add-food-div img {
+  height: 400px;
+  width: 400px;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
